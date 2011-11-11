@@ -54,15 +54,31 @@ class Client
             if (null === $value) {
                 continue;
             }
-            $queryString = '&' . $key . '=' . $value;
+            $queryString .= '&' . $key . '=' . urlencode($value);
         }
 
-        $result = simplexml_load_file(
-            self::SERVICE_URL . '?method=' . $method . '&api_key=' . $this->apiKey .
-            $queryString
-        );
+        $callUrl = self::SERVICE_URL . '?method=' . $method . '&api_key=' . $this->apiKey . $queryString;
+        $data = $this->httpRequest($callUrl);
+
+        $result = simplexml_load_string($data);
 
         return $result;
+    }
+
+    /**
+     * Do a simple HTTP-GET request
+     *
+     * @param string $callUrl The url that the request is to.
+     * @return mixed
+     */
+    public function httpRequest($callUrl)
+    {
+        $curl = curl_init($callUrl);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $data = curl_exec($curl);
+        curl_close($curl);
+
+        return $data;
     }
 }
 
