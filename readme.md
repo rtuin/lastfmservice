@@ -6,6 +6,19 @@ The library is designed to be slim and simple. In fact it is just a wrapper to t
 API calls are instances of `SimpleXmlElement`. This is on purpose as the `SimpleXmlElement` classes allow for easy traversing
 over the data and even query against it.
 
+A simple code example is the following:
+
+    // This code sample queries the Last.fm Album.getInfo method
+    // Preconfigure the client
+    $apiKey = 'yourapikey';
+    $client = new Lastfm\Service\Client($apiKey);
+
+    // Instantiate an instance of the service subset (or entity if you like)
+    $album = new Lastfm\Service\Album($client);
+
+    // The actual query to the API
+    $result = $album->getInfo('On the go', 'Matthew Halsall');
+
 ## Thoughts and wishlist
 As the library is generated from the documentation that is available [here](http://www.last.fm/api), there is still
 some work to do.
