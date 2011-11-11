@@ -20,10 +20,12 @@ A simple code example is the following:
     $result = $album->getInfo('On the go', 'Matthew Halsall');
 
 ## Thoughts and wishlist
-As the library is generated from the documentation that is available [here](http://www.last.fm/api), there is still
-some work to do.
-As i've just needed a relatively small portion of the library for the project i'm working on, unit tests are not written
-for every component.
+The library is generated from the documentation that is available [here](http://www.last.fm/api), and there is still
+some manual work to do.
+
+As i've just needed a relatively small portion of the library for the project i'm working on, there are just
+some unit tests for the sake of it, not for every part of the library.
+
 Also, it would be nice to see the `Client` class remember authentication tokens etc.
 
 Another thing that is worth looking at is the client `httpRequest` method; not sure if CURL is the way to go.
