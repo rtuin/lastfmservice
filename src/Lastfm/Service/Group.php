@@ -58,7 +58,7 @@ class Group
      * Get the hype list for a group
      * 
      * @param string $Group The last.fm group name
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getHype($Group)
     {
@@ -74,7 +74,7 @@ class Group
      * @param string|null $page The results page you would like to fetch
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getMembers($group, $page = null, $limit = null)
     {
@@ -94,7 +94,7 @@ class Group
      * Group.getWeeklyChartList for more.
      * @param string|null $to The date at which the chart should end on. See
      * Group.getWeeklyChartList for more.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyAlbumChart($group, $from = null, $to = null)
     {
@@ -114,7 +114,7 @@ class Group
      * Group.getWeeklyChartList for more.
      * @param string|null $to The date at which the chart should end on. See
      * Group.getWeeklyChartList for more.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyArtistChart($group, $from = null, $to = null)
     {
@@ -130,7 +130,7 @@ class Group
      * can be sent to the chart services.
      * 
      * @param string $group The last.fm group name to fetch the charts list for.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyChartList($group)
     {
@@ -148,7 +148,7 @@ class Group
      * Group.getWeeklyChartList for more.
      * @param string|null $to The date at which the chart should end on. See
      * Group.getWeeklyChartList for more.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyTrackChart($group, $from = null, $to = null)
     {

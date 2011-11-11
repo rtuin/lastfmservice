@@ -61,7 +61,7 @@ class Venue
      * for.
      * @param string|null $festivalsonly Whether only festivals should be returned, or
      * all events.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getEvents($venue, $festivalsonly = null)
     {
@@ -81,7 +81,7 @@ class Venue
      * @param string|null $page The page of results to return.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getPastEvents($venue, $festivalsonly = null, $page = null, $limit = null)
     {
@@ -102,7 +102,7 @@ class Venue
      * 50.
      * @param string|null $country Filter your results by country. Expressed as an ISO
      * 3166-2 code.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function search($venue, $page = null, $limit = null, $country = null)
     {

@@ -71,7 +71,7 @@ class Radio
      * (supported multipliers are 1.0 and 2.0)
      * @param string|null $bitrate What bitrate to stream content at, in kbps
      * (supported bitrates are 64 and 128)
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getPlaylist($sk, $api_sig, $discovery = null, $rtp = null, $buylinks = null, $speed_multiplier = null, $bitrate = null)
     {
@@ -91,7 +91,7 @@ class Radio
      * most likely to represent
      * 
      * @param string $name The tag or artist to resolve
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function search($name)
     {
@@ -110,7 +110,7 @@ class Radio
      * @param string $station A lastfm:// radio URL
      * @param string|null $lang An ISO language code to determine the language to
      * return the station name in, expressed as an ISO 639 alpha-2 code.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function tune($sk, $api_sig, $station, $lang = null)
     {

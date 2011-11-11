@@ -63,7 +63,7 @@ class User
      * @param string|null $startTimestamp An unix timestamp to start at.
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $endTimestamp An unix timestamp to end at.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getArtistTracks($artist, $user, $startTimestamp = null, $page = null, $endTimestamp = null)
     {
@@ -83,7 +83,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getBannedTracks($user, $limit = null, $page = null)
     {
@@ -104,7 +104,7 @@ class User
      * 50.
      * @param string|null $festivalsonly Whether only festivals should be returned, or
      * all events.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getEvents($user, $page = null, $limit = null, $festivalsonly = null)
     {
@@ -125,7 +125,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getFriends($user, $recenttracks = null, $limit = null, $page = null)
     {
@@ -142,7 +142,7 @@ class User
      * 
      * @param string|null $user The user to fetch info for. Defaults to the
      * authenticated user.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getInfo($user = null)
     {
@@ -158,7 +158,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getLovedTracks($user, $limit = null, $page = null)
     {
@@ -175,7 +175,7 @@ class User
      * @param string $user The last.fm username to fetch the neighbours of.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getNeighbours($user, $limit = null)
     {
@@ -192,7 +192,7 @@ class User
      * @param string|null $userecs 0 or 1. If 1, the feed contains new releases based
      * on Last.fm's artist recommendations for this user. Otherwise, it is based on
      * their library (the default).
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getNewReleases($user, $userecs = null)
     {
@@ -209,7 +209,7 @@ class User
      * @param string|null $page The page number to scan to.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getPastEvents($user, $page = null, $limit = null)
     {
@@ -229,7 +229,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getPersonalTags($taggingtype, $tag, $user, $limit = null, $page = null)
     {
@@ -246,7 +246,7 @@ class User
      * Get a list of a user's playlists on Last.fm.
      * 
      * @param string $user The last.fm username to fetch the playlists of.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getPlaylists($user)
     {
@@ -266,7 +266,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 10. Maximum is 25.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getRecentStations($sk, $api_sig, $user, $limit = null, $page = null)
     {
@@ -294,7 +294,7 @@ class User
      * @param string|null $from Beginning timestamp of a range - only display scrobbles
      * after this time, in UNIX timestamp format (integer number of seconds since
      * 00:00:00, January 1st 1970 UTC). This must be in the UTC time zone.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getRecentTracks($user, $limit = null, $page = null, $to = null, $from = null)
     {
@@ -317,7 +317,7 @@ class User
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getRecommendedArtists($sk, $api_sig, $page = null, $limit = null)
     {
@@ -339,7 +339,7 @@ class User
      * information.
      * @param string|null $page The page number to scan to.
      * @param string|null $limit The number of events to return per page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getRecommendedEvents($sk, $api_sig, $page = null, $limit = null)
     {
@@ -358,7 +358,7 @@ class User
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getShouts($user, $page = null, $limit = null)
     {
@@ -379,7 +379,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopAlbums($user, $period = null, $limit = null, $page = null)
     {
@@ -401,7 +401,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopArtists($user, $period = null, $limit = null, $page = null)
     {
@@ -418,7 +418,7 @@ class User
      * 
      * @param string $user The user name
      * @param string|null $limit Limit the number of tags returned
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopTags($user, $limit = null)
     {
@@ -438,7 +438,7 @@ class User
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopTracks($user, $period = null, $limit = null, $page = null)
     {
@@ -459,7 +459,7 @@ class User
      * User.getChartsList for more.
      * @param string|null $to The date at which the chart should end on. See
      * User.getChartsList for more.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyAlbumChart($user, $from = null, $to = null)
     {
@@ -479,7 +479,7 @@ class User
      * User.getWeeklyChartList for more.
      * @param string|null $to The date at which the chart should end on. See
      * User.getWeeklyChartList for more.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyArtistChart($user, $from = null, $to = null)
     {
@@ -495,7 +495,7 @@ class User
      * be sent to the chart services.
      * 
      * @param string $user The last.fm username to fetch the charts list for.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyChartList($user)
     {
@@ -513,7 +513,7 @@ class User
      * User.getWeeklyChartList for more.
      * @param string|null $to The date at which the chart should end on. See
      * User.getWeeklyChartList for more.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyTrackChart($user, $from = null, $to = null)
     {
@@ -533,7 +533,7 @@ class User
      * information.
      * @param string $sk A session key generated by authenticating a user via the
      * authentication protocol.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function shout($user, $message, $api_sig, $sk)
     {

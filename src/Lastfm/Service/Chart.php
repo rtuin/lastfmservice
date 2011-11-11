@@ -60,7 +60,7 @@ class Chart
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getHypedArtists($page = null, $limit = null)
     {
@@ -76,7 +76,7 @@ class Chart
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getHypedTracks($page = null, $limit = null)
     {
@@ -92,7 +92,7 @@ class Chart
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getLovedTracks($page = null, $limit = null)
     {
@@ -108,7 +108,7 @@ class Chart
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopArtists($page = null, $limit = null)
     {
@@ -124,7 +124,7 @@ class Chart
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopTags($page = null, $limit = null)
     {
@@ -140,7 +140,7 @@ class Chart
      * @param string|null $page The page number to fetch. Defaults to first page.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopTracks($page = null, $limit = null)
     {

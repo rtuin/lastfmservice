@@ -65,7 +65,7 @@ class Auth
      * '+' represents a concatenation.
      * @param string $api_sig A Last.fm method signature. See authentication for more
      * information.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getMobileSession($username, $authToken, $api_sig)
     {
@@ -85,7 +85,7 @@ class Auth
      * application by the user)
      * @param string $api_sig A Last.fm method signature. See authentication for more
      * information.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getSession($token, $api_sig)
     {
@@ -102,7 +102,7 @@ class Auth
      * 
      * @param string $api_sig A Last.fm method signature. See authentication for more
      * information.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getToken($api_sig)
     {

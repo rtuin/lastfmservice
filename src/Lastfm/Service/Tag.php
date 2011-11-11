@@ -60,7 +60,7 @@ class Tag
      * @param string|null $artist The artist name
      * @param string|null $lang The language to return the biography in, expressed as
      * an ISO 639 alpha-2 code.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getInfo($artist = null, $lang = null)
     {
@@ -75,7 +75,7 @@ class Tag
      * listening data.
      * 
      * @param string $tag The tag name
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getSimilar($tag)
     {
@@ -91,7 +91,7 @@ class Tag
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopAlbums($tag, $limit = null, $page = null)
     {
@@ -109,7 +109,7 @@ class Tag
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopArtists($tag, $limit = null, $page = null)
     {
@@ -124,7 +124,7 @@ class Tag
      * Fetches the top global tags on Last.fm, sorted by popularity (number of times
      * used)
      * 
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopTags()
     {
@@ -139,7 +139,7 @@ class Tag
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getTopTracks($tag, $limit = null, $page = null)
     {
@@ -161,7 +161,7 @@ class Tag
      * Tag.getWeeklyChartList for more.
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 50.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyArtistChart($tag, $from = null, $to = null, $limit = null)
     {
@@ -178,7 +178,7 @@ class Tag
      * be sent to the chart services.
      * 
      * @param string $tag The tag name
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function getWeeklyChartList($tag)
     {
@@ -194,7 +194,7 @@ class Tag
      * @param string|null $limit The number of results to fetch per page. Defaults to
      * 30.
      * @param string|null $page The page number to fetch. Defaults to first page.
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function search($tag, $limit = null, $page = null)
     {

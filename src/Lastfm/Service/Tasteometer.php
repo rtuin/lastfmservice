@@ -62,7 +62,7 @@ class Tasteometer
      * 100)]
      * @param string $type 'user' | 'artists'
      * @param string|null $limit How many shared artists to display
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function compare($value, $type, $limit = null)
     {
@@ -85,7 +85,7 @@ class Tasteometer
      * returned
      * @param string|null $connectionLimit The maximum number of connections each user
      * should have
-     * @return SimpleXmlElement The direct response from the Lastfm server
+     * @return \SimpleXmlElement The direct response from the Lastfm server
      */
     public function compareGroup($value, $source, $cutoff = null, $connectionLimit = null)
     {
